@@ -28,7 +28,7 @@ print(df['label'].value_counts())
 # ==============================
 # 2️⃣ REMOVE EXTREMELY RARE CLASSES (<20 samples)
 # ==============================
-print("\nRemoving rare classes (<20 samples)...")gt
+print("\nRemoving rare classes (<20 samples)...")
 class_counts = df['label'].value_counts()
 valid_classes = class_counts[class_counts >= 20].index
 df = df[df['label'].isin(valid_classes)]
