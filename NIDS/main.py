@@ -20,7 +20,7 @@ from sklearn.svm import SVC
 # 1️⃣ LOAD DATASET
 # ==============================
 print("Loading dataset...")
-df = pd.read_csv(r"C:\Users\USER\Downloads\NIDS (1)\NIDS\dataset\nids_data.csv")
+df = pd.read_csv(r"dataset/nids_data.csv")
 print("Dataset loaded:", df.shape)
 print("\nClass distribution before cleaning:")
 print(df['label'].value_counts())
@@ -28,7 +28,7 @@ print(df['label'].value_counts())
 # ==============================
 # 2️⃣ REMOVE EXTREMELY RARE CLASSES (<20 samples)
 # ==============================
-print("\nRemoving rare classes (<20 samples)...")
+print("\nRemoving rare classes (<20 samples)...")gt
 class_counts = df['label'].value_counts()
 valid_classes = class_counts[class_counts >= 20].index
 df = df[df['label'].isin(valid_classes)]
